@@ -25,6 +25,7 @@
 }
 .carousel-inner {
   border-radius: 15px;
+  box-shadow: 0 0 5px 1px rgb(162, 162, 162);
 }
 .sizing {
   width: 550px !important;
@@ -155,22 +156,20 @@
   height: 100%;
   justify-content: space-between;
 }
-.party__box-left {
-  background: linear-gradient(45deg, rgb(199, 199, 197), rgb(216, 215, 209));
-  width: 48%;
-  height: 100%;
-  position: relative;
-}
+.party__box-left,
 .party__box-right {
-  background: linear-gradient(45deg, darkslateblue, rgb(75, 101, 179));
+  background: white;
   width: 48%;
   height: 100%;
   position: relative;
+  cursor: pointer;
 }
+
 .party__box-left,
 .party__box-right,
 .wonder__box {
   border-radius: 15px;
+  box-shadow: 0 0 3px 2px lightgray;
 }
 .plus-icon,
 .party__text,
@@ -196,7 +195,7 @@
   text-align: left;
 }
 .party__text > h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
 }
 .party__text > span {
@@ -208,6 +207,7 @@
   font-size: 20px;
   font-weight: bold;
   color: var(--color-purple);
+  cursor: pointer;
 }
 
 /* About ICU */
