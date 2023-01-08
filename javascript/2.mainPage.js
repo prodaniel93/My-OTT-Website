@@ -1,5 +1,8 @@
 'ust strict';
 
+// 추천컨텐츠
+let overlay = document.querySelector('overlay-black');
+
 // 채팅봇
 let chatClick = document.querySelector('.chatBot');
 let chatDiv = document.querySelector('.chat_wrap');
