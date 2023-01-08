@@ -1,8 +1,5 @@
 'ust strict';
 
-// 추천컨텐츠
-let overlay = document.querySelector('overlay-black');
-
 // 채팅봇
 let chatClick = document.querySelector('.chatBot');
 let chatDiv = document.querySelector('.chat_wrap');
@@ -43,7 +40,7 @@ $(function () {
 
       let position =
         lastItem.position().top + $('.chat_wrap .inner').scrollTop();
-      console.log(position);
+      // console.log(position);
 
       $('.chat_wrap .inner').stop().animate({ scrollTop: position }, 500);
     }
