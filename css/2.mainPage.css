@@ -20,7 +20,7 @@
   width: 850px;
   height: 52vh;
   padding: 40px;
-  padding-top: 105px;
+  padding-top: 135px;
   text-align: center;
 }
 .carousel-inner {
@@ -212,58 +212,97 @@
 
 /* About ICU */
 .wonder__box {
-  background-color: aquamarine;
+  background-color: rgb(237, 211, 97);
   margin: auto;
   width: 770px;
-  height: 100px;
+  height: 110px;
   margin-top: 18px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
 }
-
+.wonder__box > span {
+  color: rgb(130, 130, 130);
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: -20px;
+}
+.about-img {
+  position: absolute;
+  right: 0;
+}
 /* 추천콘텐츠 */
 #recommend {
   margin-bottom: 50px;
+  margin-top: 60px;
 }
 .recommend__box {
   /* background-color: darkgoldenrod; */
   margin: auto;
   width: 1200px;
-  height: 200px;
+  height: 335px;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
-.recommend-container {
-  padding-top: 90px;
-}
+
 .recommend__text {
   /* background-color: rgb(189, 179, 166); */
   text-align: left;
   display: inline-block;
   margin-left: 19%;
 }
-.recommend__box-first,
-.recommend__box-second,
-.recommend__box-third,
-.recommend__box-fourth {
+.movie-poster {
   width: 24%;
   border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgb(139, 137, 137);
+  cursor: pointer;
+  transition: all 0.1s linear;
 }
-.recommend__box-first {
-  background-color: cadetblue;
+.movie-poster:hover {
+  transform: scale(1.1);
 }
+
 .recommend__box img {
   width: 100%;
 }
-.recommend__box-second {
-  background-color: cadetblue;
+.poster-text {
+  background-color: #999;
 }
-.recommend__box-third {
-  background-color: cadetblue;
+.overlay {
+  position: absolute;
+  /* 공중에 붕뜸 */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  /* 언제 최종을 변할지 작성  hover*/
+  transition: all 1s; /*애니메이션*/
+  /* overflow: visible; */
 }
-.recommend__box-fourth {
-  background-color: cadetblue;
+.overlay:hover {
+  opacity: 1;
 }
-
+.overlay-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* 넘치는 부분 히든 시킴 */
+}
+.overlay-black {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 100%;
+  transition: all 1s;
+}
+.overlay-wrap:hover .overlay-black {
+  margin-top: 50%;
+}
 /* chatBot */
 .chatBot {
   position: fixed;
@@ -277,7 +316,7 @@
   color: var(--color-white);
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.1s ease-in;
+  transition: all 0.1s linear;
   z-index: 2;
 }
 .chatBot:hover {
