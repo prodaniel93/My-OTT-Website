@@ -28,9 +28,9 @@ $(function () {
           _class +
           '"><div class="box"><p class="msg">' +
           _val +
-          '</p><span class="time">' +
+          '</p><p class="time">' +
           currentTime() +
-          '</span></div></div>'
+          '</p></div></div> '
       );
 
       let lastItem = $('.chat_wrap .inner').find('.item:last');

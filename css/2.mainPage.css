@@ -225,7 +225,7 @@
   position: relative;
   cursor: pointer;
 }
-.wonder__box > span {
+.wonder-text {
   color: rgb(130, 130, 130);
   font-size: 22px;
   font-weight: 600;
