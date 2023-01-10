@@ -434,18 +434,16 @@
   opacity: 1;
 }
 
-.mymsg,
-.yourmsg {
+input[type='text'] {
   border: 0;
   width: 100%;
-  /* background: #ddd; */
+  background: #ddd;
   border-radius: 5px;
   height: 30px;
   padding-left: 5px;
   box-sizing: border-box;
   margin-top: 5px;
 }
-.mymsg::placeholder,
-.yourmsg::placeholder {
+input[type='text']::placeholder {
   color: #999;
 }

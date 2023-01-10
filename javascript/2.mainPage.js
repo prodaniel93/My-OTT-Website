@@ -18,40 +18,40 @@ closeBtn.addEventListener('click', function () {
 });
 
 $(function () {
-  $('.send-msg').keypress(function (e) {
+  $("input[type='text']").keypress(function (e) {
     if (e.keyCode == 13 && $(this).val().length) {
-      let _val = $(this).val();
-      let _class = $(this).attr('class');
+      var _val = $(this).val();
+      var _class = $(this).attr('class');
       $(this).val('');
-      let _tar = $('.chat_wrap .inner').append(
+      var _tar = $('.chat_wrap .inner').append(
         '<div class="item ' +
           _class +
           '"><div class="box"><p class="msg">' +
           _val +
-          '</p><p class="time">' +
+          '</p><span class="time">' +
           currentTime() +
-          '</p></div></div> '
+          '</span></div></div>'
       );
 
-      let lastItem = $('.chat_wrap .inner').find('.item:last');
+      var lastItem = $('.chat_wrap .inner').find('.item:last');
       setTimeout(function () {
         lastItem.addClass('on');
       }, 10);
 
-      let position =
+      var position =
         lastItem.position().top + $('.chat_wrap .inner').scrollTop();
-      // console.log(position);
+      console.log(position);
 
       $('.chat_wrap .inner').stop().animate({ scrollTop: position }, 500);
     }
   });
 });
 
-let currentTime = function () {
-  let date = new Date();
-  let hh = date.getHours();
-  let mm = date.getMinutes();
-  let apm = hh > 12 ? '오후' : '오전';
-  let ct = apm + ' ' + hh + ':' + mm + '';
+var currentTime = function () {
+  var date = new Date();
+  var hh = date.getHours();
+  var mm = date.getMinutes();
+  var apm = hh > 12 ? '오후' : '오전';
+  var ct = apm + ' ' + hh + ':' + mm + '';
   return ct;
 };
