@@ -18,7 +18,7 @@ closeBtn.addEventListener('click', function () {
 });
 
 $(function () {
-  $("input[type='text']").keypress(function (e) {
+  $('.send-msg').keypress(function (e) {
     if (e.keyCode == 13 && $(this).val().length) {
       var _val = $(this).val();
       var _class = $(this).attr('class');
