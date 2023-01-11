@@ -51,7 +51,7 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="../css/02_mainPage.css" />
+    <link rel="stylesheet" href="../css/03_logIn.css" />
 
     <!-- jQuery -->
     <script
@@ -98,5 +98,52 @@
         </div>
       </ul>
     </nav>
+
+    <!-- Logo -->
+    <div id="main__logo">
+      <img src="../image/navbarLogo.png" />
+    </div>
+
+    <!-- id / pwd input -->
+    <!-- 회원가입 / 아이디, 비밀번호 찾기 -->
+    <div id="input__container">
+      <div class="input__id">
+        <span>아이디</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input
+          class="info-id info"
+          type="text"
+          placeholder="아이디를 입력해주세요."
+        />
+      </div>
+      <div class="input__pwd">
+        <span>비밀번호</span> &nbsp;&nbsp;
+        <input
+          class="info-pwd info"
+          type="text"
+          placeholder="비밀번호를 입력해주세요."
+        />
+      </div>
+      <div class="join-container">
+        <a href="#">회원가입 &nbsp;|&nbsp; </a>
+        <a href="#">아이디 / 비밀번호 찾기</a>
+      </div>
+    </div>
+
+    <!-- login , naver , kakao -->
+    <div id="loginButton">
+      <div class="login__button loginbtn">
+        <button type="button">로그인</button>
+      </div>
+      <div class="naver__button loginbtn">
+        <button type="button">네이버 로그인</button>
+      </div>
+      <div class="kakao__button loginbtn">
+        <button type="button">카카오톡 로그인</button>
+      </div>
+    </div>
+
+    <script src="../javascript/03_logIn.js" defer></script>
+    <script src="../javascript/02_mainPage.js" defer></script>
+    <script src="../javascript/main.js" defer></script>
   </body>
 </html>
