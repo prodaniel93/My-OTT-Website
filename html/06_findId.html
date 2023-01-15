@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ICU - 로그인</title>
+    <title>ICU - 아이디 찾기</title>
 
     <!-- bootstrap -->
     <link
@@ -51,7 +51,7 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="../css/03_logIn.css" />
+    <link rel="stylesheet" href="../css/06_findId.css" />
 
     <!-- jQuery -->
     <script
@@ -60,6 +60,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <!-- Navbar -->
     <nav id="navbar">
@@ -99,54 +100,107 @@
       </ul>
     </nav>
 
-    <!-- Logo -->
-    <div id="main__logo">
-      <img src="../image/navbarLogo.png" />
+    <!-- id찾기 화면 -->
+    <div class="idPwdBtn">
+      <button>아이디 찾기</button>
+      <button>비밀번호 찾기</button>
     </div>
 
-    <!-- id / pwd input -->
-    <!-- 회원가입 / 아이디, 비밀번호 찾기 -->
-    <div id="input__container">
-      <div class="input__id">
-        <span>아이디</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input
-          class="info-id info"
-          type="text"
-          placeholder="아이디를 입력해주세요."
-        />
-      </div>
-      <div class="input__pwd">
-        <span>비밀번호</span> &nbsp;&nbsp;
-        <input
-          class="info-pwd info"
-          type="text"
-          placeholder="비밀번호를 입력해주세요."
-        />
-      </div>
-      <div class="join-container">
-        <a href="04_enrollForm1.html">회원가입 &nbsp;|&nbsp; </a>
-        <a href="06_findId.html">아이디 / 비밀번호 찾기</a>
-      </div>
-    </div>
+    <div class="input__info">
+      <table>
+        <tr>
+          <td>이름</td>
+          <td><input type="text" placeholder="이름을 입력해주세요." /></td>
+        </tr>
 
-    <!-- login , naver , kakao -->
-    <div id="loginButton">
-      <div class="login__button loginbtn">
-        <button type="button">로그인</button>
-      </div>
-      <div class="naver__button loginbtn">
-        <button type="button">
-          <img src="../image/naverLogo.png" />네이버 로그인
-        </button>
-      </div>
-      <div class="kakao__button loginbtn">
-        <button type="button">
-          <img src="../image/kakaoLogo.png" />카카오톡 로그인
-        </button>
+        <tr>
+          <td>휴대폰 번호</td>
+          <td><input type="text" placeholder="010-0000-0000" /></td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-primary tableBtn"
+              data-bs-toggle="modal"
+              data-bs-target="#phoneModal"
+            >
+              인증번호 전송
+            </button>
+          </td>
+        </tr>
+      </table>
+
+      <div class="btn__group">
+        <button onclick="location.href='03_logIn.html'">이전</button>
+        <button data-bs-toggle="modal" data-bs-target="#idModal">확인</button>
       </div>
     </div>
 
-    <script src="../javascript/02_mainPage.js" defer></script>
-    <script src="../javascript/main.js" defer></script>
+    <!-- 휴대폰 인증번호 전송 모달창 -->
+    <div
+      class="modal fade"
+      id="phoneModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">휴대폰인증</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              닫기
+            </button>
+            <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 아이디 알려주는 모달창 -->
+    <div
+      class="modal fade"
+      id="idModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">아이디 확인</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">회원님의 아이디는 ㅁㅁㅁㅁ입니다.</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              닫기
+            </button>
+            <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

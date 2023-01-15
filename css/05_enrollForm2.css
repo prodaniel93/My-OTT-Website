@@ -54,11 +54,13 @@ tr {
   border: none;
   font-weight: bold;
   font-size: 18px;
-  font-family: 고딕;
   color: var(--color-purple);
 }
 .tableBtn:hover {
   background-color: var(--color-orange);
+}
+.tableBtn:active {
+  background-color: var(--color-orange) !important;
 }
 
 .btn__group > button {
