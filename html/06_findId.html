@@ -59,6 +59,9 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
+
+    <!-- sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </head>
 
   <body>
@@ -99,41 +102,85 @@
         </div>
       </ul>
     </nav>
-
+    <div class="logoBox">
+      <img class="imgLogo" src="../image/navbarLogo.png" />
+    </div>
     <!-- id찾기 화면 -->
-    <div class="idPwdBtn">
-      <button>아이디 찾기</button>
-      <button>비밀번호 찾기</button>
-    </div>
-
-    <div class="input__info">
-      <table>
-        <tr>
-          <td>이름</td>
-          <td><input type="text" placeholder="이름을 입력해주세요." /></td>
-        </tr>
-
-        <tr>
-          <td>휴대폰 번호</td>
-          <td><input type="text" placeholder="010-0000-0000" /></td>
-          <td>
-            <button
-              type="button"
-              class="btn btn-primary tableBtn"
-              data-bs-toggle="modal"
-              data-bs-target="#phoneModal"
-            >
-              인증번호 전송
-            </button>
-          </td>
-        </tr>
-      </table>
-
-      <div class="btn__group">
-        <button onclick="location.href='03_logIn.html'">이전</button>
-        <button data-bs-toggle="modal" data-bs-target="#idModal">확인</button>
+    <section id="idPwdSection ">
+      <div class="idPwdBtn">
+        <button class="findIdBtn">아이디 찾기</button>
+        <button class="findPwdBtn">비밀번호 찾기</button>
       </div>
-    </div>
+      <br />
+      <div id="findIdBox">
+        <div class="input__info">
+          <table>
+            <tr>
+              <td>이름</td>
+              <td><input type="text" placeholder="이름을 입력해주세요." /></td>
+            </tr>
+
+            <tr>
+              <td>휴대폰 번호</td>
+              <td><input type="text" placeholder="010-0000-0000" /></td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-primary tableBtn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#phoneModal"
+                >
+                  인증번호 전송
+                </button>
+              </td>
+            </tr>
+          </table>
+
+          <div class="btn__group">
+            <button onclick="location.href='03_logIn.html'">이전</button>
+            <button data-bs-toggle="modal" data-bs-target="#idModal">
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 비밀번호 -->
+      <div id="findPwdBox">
+        <div class="input__info">
+          <table>
+            <tr>
+              <td>아이디</td>
+              <td>
+                <input type="text" placeholder="아이디를 입력해주세요." />
+              </td>
+            </tr>
+
+            <tr>
+              <td>휴대폰 번호</td>
+              <td><input type="text" placeholder="010-0000-0000" /></td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-primary tableBtn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#phoneModal"
+                >
+                  인증번호 전송
+                </button>
+              </td>
+            </tr>
+          </table>
+
+          <div class="btn__group">
+            <button onclick="location.href='03_logIn.html'">이전</button>
+            <button data-bs-toggle="modal" data-bs-target="#pwdModal">
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- 휴대폰 인증번호 전송 모달창 -->
     <div
@@ -164,6 +211,56 @@
               닫기
             </button>
             <button type="button" class="btn btn-primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 비밀번호 변경 모달창 -->
+    <div
+      class="modal fade"
+      id="pwdModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              새로 설정할 비밀번호를 입력하세요.
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              placeholder="비밀번호 입력"
+              style="width: 450px"
+            />
+            <br /><br />
+            <input
+              type="text"
+              placeholder="비밀번호 재입력"
+              style="width: 450px"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              닫기
+            </button>
+            <button type="button" class="btn btn-primary" id="btnAlert">
+              확인
+            </button>
           </div>
         </div>
       </div>
@@ -202,5 +299,7 @@
         </div>
       </div>
     </div>
+
+    <script src="../javascript/06_findId.js" defer></script>
   </body>
 </html>
