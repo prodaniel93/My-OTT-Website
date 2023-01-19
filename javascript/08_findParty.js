@@ -10,4 +10,4 @@
 //       party[i].style.display = 'none';
 //     }
 //   }
-// }
+}
