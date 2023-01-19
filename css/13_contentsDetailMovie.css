@@ -5,7 +5,7 @@
   margin-top: 110px;
   background-color: white;
   width: 50%;
-  height: 800px;
+  height: 1300px;
 }
 
 .moive-header {
@@ -36,7 +36,14 @@
 }
 .movie-trailer {
   text-align: center;
+  /* background-color: antiquewhite; */
+  width: 800px;
+  margin: auto;
+  padding: 25px;
 }
 .movie-trailer > iframe {
   margin: auto;
+}
+.movie-trailer > p {
+  text-align: left;
 }
