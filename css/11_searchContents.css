@@ -42,7 +42,7 @@ img {
 #drama__section {
   width: 50%;
   margin: auto;
-  background-color: antiquewhite;
+  background-color: white;
   padding: 20px;
 }
 
@@ -54,20 +54,20 @@ img {
 .movie__info,
 .drama__info {
   padding: 20px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .movie__text,
 .drama__text {
   padding: 20px;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .movie__text > p,
 .drama__text > p {
-  background-color: beige;
+  /* background-color: beige; */
   font-size: 18px;
 }
 
