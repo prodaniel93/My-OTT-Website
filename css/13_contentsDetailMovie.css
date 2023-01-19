@@ -1,0 +1,42 @@
+@import url('main.css');
+
+#movieInfo-container {
+  margin: auto;
+  margin-top: 110px;
+  background-color: white;
+  width: 50%;
+  height: 800px;
+}
+
+.moive-header {
+  /* background-color: antiquewhite; */
+  height: 40%;
+}
+
+.moive__title-poster-box {
+  /* background-color: aquamarine; */
+  display: flex;
+  padding: 30px 60px;
+}
+
+.movie-title {
+  width: 40%;
+  /* background-color: burlywood; */
+  padding: 30px 50px;
+}
+
+.moive-poster {
+  /* background-color: rgb(236, 155, 155); */
+  width: 54%;
+  text-align: right;
+}
+
+.moive-poster > img {
+  height: 270px;
+}
+.movie-trailer {
+  text-align: center;
+}
+.movie-trailer > iframe {
+  margin: auto;
+}
