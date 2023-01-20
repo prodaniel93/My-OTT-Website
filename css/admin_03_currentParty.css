@@ -49,3 +49,19 @@
 .noneContainer {
   display: none;
 }
+
+.modal-body {
+  text-align: center;
+}
+.firstBtn,
+.secondBtn {
+  width: 150px;
+  color: white;
+  border-radius: 8px;
+}
+.firstBtn {
+  background-color: rgb(65, 65, 247);
+}
+.secondBtn {
+  background-color: rgb(235, 65, 65);
+}
