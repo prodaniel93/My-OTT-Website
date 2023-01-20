@@ -1,0 +1,21 @@
+@import url('main.css');
+@import url('admin_main.css');
+
+#contentsEnroll {
+  margin: auto;
+  margin-top: 120px;
+  padding-left: 200px;
+  width: 60%;
+  /* background-color: antiquewhite; */
+}
+
+.form-select {
+  width: 200px;
+}
+
+.input__title {
+  padding: 20px;
+}
+.input__title > input[type='text'] {
+  padding: 10px;
+}
