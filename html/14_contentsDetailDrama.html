@@ -5,6 +5,177 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ICU - 컨텐츠 상세보기(드라마)</title>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 웹사이트에 아이콘 추가 -->
+    <link rel="icon" type="image/png" href="../image/navbarLogo.png" />
+
+    <!-- Font Awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/13_contentsDetailMovie.css" />
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </head>
-  <body></body>
+
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <a href="#">
+          <img class="logoImg" src="../image/navbarLogo.png" alt="cloudLogo" width="150px" />
+        </a>
+      </div>
+
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active1" data-link="#home">파티만들기</li>
+        <li class="navbar__menu__item">파티찾기</li>
+        <li class="navbar__menu__item">컨텐츠 찾기</li>
+        <li class="navbar__menu__item">자유게시판</li>
+        <li class="navbar__menu__item">FAQ</li>
+        &nbsp;&nbsp;
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle profile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user fa-lg"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">사용자 닉네임</a></li>
+            <li><a class="dropdown-item" href="#">마이페이지</a></li>
+            <li><a class="dropdown-item" href="#">로그아웃</a></li>
+          </ul>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- 드라마 INFO -->
+    <section id="movieInfo-container">
+      <div class="moive-header">
+        <div class="moive__title-poster-box">
+          <div class="movie-title">
+            <h2>드라마 제목</h2>
+            <span>title, 2023</span> <br />
+            <i class="fa-solid fa-star">4.0</i>
+            <br /><br />
+            <p>
+              관람연령 : 전체관람<br />
+              장르 : 액션<br />
+              상영시간 : 120분<br />
+              개봉날짜 : 2023.01.01
+            </p>
+          </div>
+          <div class="moive-poster">
+            <img src="https://images.justwatch.com/poster/176267183/s592/avatar" />
+          </div>
+        </div>
+        <div class="movie-trailer">
+          <iframe
+            width="750"
+            height="300"
+            src="https://www.youtube.com/embed/kihrFxwdMb4"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <p>
+            <b>감독</b> : 이범석 <br />
+            <b>배우</b> : #황종수 #서경주 #이상엽 #한대웅 <br />
+            <b>줄거리</b> : 이상, 방황하였으며, 청춘 열락의 운다. 얼마나 물방아 얼마나 아니다. 방황하여도, 설레는 수 놀이 이상의 얼마나
+            말이다. 구할 같으며, 보내는 뿐이다. 오직 할지니, 목숨을 놀이 갑 바로 뿐이다. 인간이 같은 이상은 아니다. 별과 꽃 일월과 피고
+            고행을 기쁘며, 바이며, 아니한 때문이다. 그들의 반짝이는 하는 할지라도 용기가 그리하였는가? 피에 앞이 타오르고 그들은 아니다.
+            긴지라 가치를 이 것이다. 심장의 그와 이상, 가슴에 사막이다. 인생의 실로 자신과 때까지 우리의 없으면 위하여서.
+          </p>
+          <br />
+        </div>
+        <hr />
+        <br />
+        <div class="comment">
+          <span
+            >별점 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star"></i></span
+          ><br />
+          <div class="comment__text">
+            <textarea name="" id="" cols="80" rows="4"></textarea> &nbsp;
+            <button>입력</button>
+          </div>
+          <hr />
+          <br />
+          <div class="member__comment">
+            <div class="first-box">
+              <div class="member__photo">
+                <div class="photoImg">
+                  <i class="fa-solid fa-user fa-2x"></i>
+                </div>
+                <h4>파티원</h4>
+              </div>
+              <div class="party__comment">
+                <p>
+                  너무재밌어요! 정말 재밌어서 다시 한번 꼭 봐보고싶을 정도에요! 너무재밌어요! 정말 재밌어서 다시 한번 꼭 봐보고싶을
+                  정도에요! 너무재밌어요! 정말 재밌어서 다시 한번 꼭 봐보고싶을 정도에요!
+                </p>
+              </div>
+            </div>
+            <br />
+            <div class="first-box">
+              <div class="member__photo">
+                <div class="photoImg">
+                  <i class="fa-solid fa-user fa-2x"></i>
+                </div>
+                <h4>파티원</h4>
+              </div>
+              <div class="party__comment">
+                <p>
+                  너무재밌어요! 정말 재밌어서 다시 한번 꼭 봐보고싶을 정도에요! 너무재밌어요! 정말 재밌어서 다시 한번 꼭 봐보고싶을
+                  정도에요! 너무재밌어요! 정말 재밌어서 다시 한번 꼭 봐보고싶을 정도에요!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+    </section>
+  </body>
 </html>

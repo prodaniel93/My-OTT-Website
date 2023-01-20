@@ -5,7 +5,7 @@
   margin-top: 110px;
   background-color: white;
   width: 50%;
-  height: 1300px;
+  height: 100%;
 }
 
 .moive-header {
@@ -46,4 +46,81 @@
 }
 .movie-trailer > p {
   text-align: left;
+}
+
+.comment {
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  /* background-color: antiquewhite; */
+}
+
+hr {
+  width: 70%;
+  margin: auto;
+}
+.comment__text {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+.comment__text > button {
+  border-radius: 8px;
+  padding: 20px;
+  width: 120px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#comment {
+  width: 50%;
+  margin: auto;
+  background-color: white;
+}
+.comment__text {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 0;
+}
+.comment__text > button {
+  border-radius: 8px;
+  padding: 20px;
+  width: 120px;
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.first-box {
+  display: flex;
+  /* border: 1px solid rgb(147, 147, 147); */
+  padding: 25px;
+}
+.member__photo {
+  width: 30%;
+  text-align: center;
+}
+
+.photoImg {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.photoImg > i {
+  color: white;
+}
+
+.party__comment > p {
+  padding-left: 20px;
 }

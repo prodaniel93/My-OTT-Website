@@ -6,7 +6,6 @@ let findPwdBox = document.querySelector('#findPwdBox');
 findPwdBtn.addEventListener('click', () => {
   findIdBtn.style.backgroundColor = 'var(--color-orange)';
   findIdBtn.style.opacity = '0.3';
-
   findPwdBtn.style.backgroundColor = 'var(--color-orange)';
   findPwdBox.style.display = 'block';
   findPwdBtn.style.opacity = '1';
