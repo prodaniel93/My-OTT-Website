@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>관리자 - 컨텐츠 등록</title>
+    <title>관리자 - 컨텐츠 등록(영화)</title>
 
     <!-- bootstrap -->
     <link
@@ -142,8 +142,40 @@
               <input type="text" placeholder="제목(영어)를 입력하세요." />
             </div>
           </div>
+
+          <!-- 영화 left-box2 -->
           <div class="left-box2">
             <span>개봉 연도 : </span
+            ><select class="form-select" aria-label="Default select example">
+              <option selected>장르 선택</option>
+              <option value="1">영화</option>
+              <option value="2">드라마</option>
+            </select>
+            <span>관람 연령 : </span
+            ><select class="form-select" aria-label="Default select example">
+              <option selected>장르 선택</option>
+              <option value="1">영화</option>
+              <option value="2">드라마</option>
+            </select>
+            <span>장르</span>
+            <input id="action" type="checkbox" />
+            <label for="action">액션</label>
+            <input id="action" type="checkbox" />
+            <label for="action">드라마</label>
+            <input id="action" type="checkbox" />
+            <label for="action">코미디</label>
+            <input id="action" type="checkbox" />
+            <label for="action">공포</label>
+            <br />
+            <span>상영시간 : <input type="text" /></span><br />
+            <span>개봉날짜 : <input type="text" /></span>
+          </div>
+
+          <br />
+
+          <!-- 드라마 left-box2 -->
+          <div class="left-box2">
+            <span>방영 연도 : </span
             ><select class="form-select" aria-label="Default select example">
               <option selected>장르 선택</option>
               <option value="1">영화</option>
