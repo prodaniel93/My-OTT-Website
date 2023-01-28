@@ -20,9 +20,11 @@ closeBtn.addEventListener('click', function () {
 $(function () {
   $('.send-msg').keypress(function (e) {
     if (e.keyCode == 13 && $(this).val().length) {
+
       var _val = $(this).val();
       var _class = $(this).attr('class');
       $(this).val('');
+      
       var _tar = $('.chat_wrap .inner').append(
         '<div class="item ' +
           _class +

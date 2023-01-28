@@ -179,3 +179,7 @@ button {
   background-color: var(--color-orange);
   color: #ffffff;
 }
+
+.alert {
+  border-radius: 50%;
+}
